@@ -1,0 +1,10 @@
+,lower_fence,upper_fence,n_outliers
+total_day_minutes,34.64999999999996,325.45000000000005,25.0
+total_day_charge,5.890000000000001,55.33,25.0
+total_eve_minutes,63.54999999999997,338.35,24.0
+total_eve_charge,5.4,28.759999999999998,24.0
+total_night_minutes,64.54999999999998,337.75,30.0
+total_night_charge,2.914999999999999,15.195,30.0
+total_intl_minutes,3.1000000000000005,17.5,46.0
+total_intl_charge,0.8449999999999995,4.7250000000000005,49.0
+customer_service_calls,-0.5,3.5,267.0

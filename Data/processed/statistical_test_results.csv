@@ -1,0 +1,9 @@
+test,statistic,p_value,conclusion
+t-test: day minutes churn vs stay,9.696980421205266,1.092783740946068e-20,Reject H0: means differ significantly
+t-test: service calls churn vs stay,7.588892469306751,1.2641455955168638e-13,Reject H0: means differ significantly
+chi-square: intl plan vs churn,222.5657566499376,2.4931077033159556e-50,Reject H0: variables are dependent (associated)
+chi-square: voicemail plan vs churn,34.13166001075673,5.15063965903898e-09,Reject H0: dependent
+95% CI churn rate (lower),0.13296385277102526,,"point est=0.1449, MOE=0.0120"
+95% CI churn rate (upper),0.15686513012726458,,
+P(service_calls > 4) via Poisson,1.4762976297629764,0.017482277628581122,risk probability estimate
+A/B test: retention campaign,4.256282653793743,2.078539032988627e-05,Campaign significantly reduces churn

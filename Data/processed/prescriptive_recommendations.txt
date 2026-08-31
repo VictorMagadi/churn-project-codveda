@@ -1,0 +1,13 @@
+PRESCRIPTIVE ANALYTICS — RETENTION STRATEGY RECOMMENDATIONS
+============================================================
+
+1. Contact 40 'High-risk' customers via a phone call + discount offer; estimated 35% chance of retaining each, at $15/customer.
+
+2. Contact 479 'Medium-risk' customers via a targeted email + discount offer; estimated 18% chance of retaining each, at $8/customer.
+
+3. Contact 189 'Low-risk' customers via an automated email nudge; estimated 5% chance of retaining each, at $3/customer.
+
+4. At the current $5000 budget, expected annualized value protected is ~$78,974 (Monte Carlo 90% interval: $50,378 - $107,753).
+
+5. Scenario analysis shows returns keep scaling well beyond the current budget — consider requesting a larger retention budget next cycle.
+
