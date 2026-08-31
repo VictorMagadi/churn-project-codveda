@@ -120,11 +120,4 @@ into MySQL/PostgreSQL/SQL Server with minor syntax tweaks (noted in the file).
 3. Follow `powerbi/PowerBI_Setup_Guide.md` for the exact dashboard layout,
    and paste in the ready-made measures from `powerbi/DAX_Measures.txt`.
 
-## 7. Suggested LinkedIn / submission task pairs
 
-- **Level 1** — submit Task 2 (Data Collection & Cleaning) + Task 3 (EDA)
-- **Level 2** — submit Task 1 (BI/Power BI dashboard) + Task 2 (SQL)
-- **Level 3** — submit Task 1 (Predictive ML) + Task 2 (Risk/Anomaly Detection)
-
-(Task 3 in every level is also fully built here as a bonus, plus a
-conceptual write-up for Level 1 Task 1 in `docs/`.)
