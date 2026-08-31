@@ -1,0 +1,62 @@
+DAX MEASURES — paste into Power BI (Modeling -> New Measure)
+Home table suggestion: Customer_Detail (unless noted otherwise)
+================================================================
+
+Total Customers =
+COUNTROWS(Customer_Detail)
+
+Total Churned =
+CALCULATE(COUNTROWS(Customer_Detail), Customer_Detail[churn] = TRUE())
+
+Churn Rate % =
+DIVIDE([Total Churned], [Total Customers], 0) * 100
+
+Retention Rate % =
+100 - [Churn Rate %]
+
+Avg Monthly Charge =
+AVERAGE(Customer_Detail[total_charge])
+
+Avg Customer Service Calls =
+AVERAGE(Customer_Detail[customer_service_calls])
+
+International Plan Adoption % =
+DIVIDE(
+    CALCULATE(COUNTROWS(Customer_Detail), Customer_Detail[international_plan] = "Yes"),
+    [Total Customers], 0
+) * 100
+
+High Risk Customers =
+CALCULATE(COUNTROWS(Risk_Scores), Risk_Scores[risk_tier] = "High")
+
+High Risk % of Base =
+DIVIDE([High Risk Customers], [Total Customers], 0) * 100
+
+Avg Predicted Churn Probability =
+AVERAGE(Churn_Predictions[predicted_churn_probability])
+
+Churned Revenue at Risk =
+CALCULATE(
+    SUM(Customer_Detail[total_charge]) * 12,
+    Customer_Detail[churn] = TRUE()
+)
+-- Interpretation: annualized revenue lost to churned customers, useful as a
+-- headline "$ impact" card.
+
+Churn Rate % (YoY-style placeholder) =
+-- This dataset has no date dimension, so there's no true time-intelligence
+-- measure to build. If you later add a signup/churn DATE column, use:
+--     CALCULATE([Churn Rate %], DATEADD('Date'[Date], -1, YEAR))
+-- as the standard DAX time-intelligence pattern for a period-over-period
+-- comparison card.
+
+Segment Churn Rate % =
+DIVIDE(
+    CALCULATE(COUNTROWS(Churn_Predictions), Churn_Predictions[churn_flag] = 1),
+    COUNTROWS(Churn_Predictions), 0
+) * 100
+-- Use with `customer_segment` on rows/slicer to compare churn by cluster.
+
+Rank States by Churn =
+RANKX(ALL(By_State), By_State[churn_rate_pct], , DESC)
+-- Home table: By_State. Drag onto a table visual alongside `state`.
