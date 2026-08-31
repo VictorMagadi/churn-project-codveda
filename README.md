@@ -117,7 +117,5 @@ into MySQL/PostgreSQL/SQL Server with minor syntax tweaks (noted in the file).
 
 1. Run the Python pipeline once (steps 01–05) so `data/processed/churn_for_powerbi.xlsx` exists.
 2. Open Power BI Desktop → Get Data → Excel → select that file.
-3. Follow `powerbi/PowerBI_Setup_Guide.md` for the exact dashboard layout,
-   and paste in the ready-made measures from `powerbi/DAX_Measures.txt`.
 
 
